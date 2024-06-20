@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.site-name {
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.form-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container button {
+    padding: 0.5rem 2rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.semester {
+    margin-bottom: 1rem;
+}
+
+.semester h3 {
+    margin-top: 0;
+}
+
+.subject {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}

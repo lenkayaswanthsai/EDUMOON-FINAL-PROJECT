@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic Transcript</title>
+<link rel="stylesheet" href="main.css">
+<style>
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .subject-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .subject {
+    flex: 1;
+    min-width: 45%;
+  }
+  .button-container {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#" class="logo"><img src="logo.png" alt="Website Logo"></a>
+        <a href="#" class="site-name">Academic Transcript</a>
+      </div>
+      <div class="navbar-right">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="contactus.html" class="nav-link">Contact Us</a>
+        <a href="aboutus.html" class="nav-link">About</a>
+      </div>
+    </nav>
+  </header>
+  <div class="form-container">
+    <div class="form-header">
+        <h2>Enter Student Details</h2>
+    </div>
+    <form id="student-form" onsubmit="return false;">
+        <div class="form-group">
+            <label for="reg-number">Registered Number:</label>
+            <input type="text" id="reg-number" name="regNumber" placeholder="Enter Your Hall Ticket / Registered Number" required>
+        </div>
+        <div class="form-group">
+            <label for="aadhar-number">Aadhar Number:</label>
+            <input type="text" id="aadhar-number" name="aadharNumber" placeholder="Enter Aadhar Number" required>
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="checkStudent()">Check Student</button>
+        </div>
+    </form>
+  </div>
+
+  <div id="semester-form" style="display: none;">
+    <div class="form-container">
+      <div class="form-header">
+          <h2>Select Semester to Add Marks</h2>
+      </div>
+      <form id="add-marks-form">
+        <div id="semester-select-container" class="form-group">
+            <label>Select Semester:</label>
+            <select id="semester-select" onchange="showSemesterForm()">
+              <option value="">Select Semester</option>
+              <!-- Options will be dynamically populated based on available semesters -->
+            </select>
+        </div>
+        <div id="semester-mark-form" style="display: none;">
+          <!-- This div will be dynamically populated with the selected semester's form -->
+        </div>
+        <div class="button-container">
+            <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Simulated data for existing students
+    const students = [
+      { regNumber: "123456", aadharNumber: "9876543210", semesters: [1, 2, 3] },
+      { regNumber: "654321", aadharNumber: "0123456789", semesters: [1, 3, 5, 7] }
+    ];
+
+    function checkStudent() {
+      const regNumber = document.getElementById('reg-number').value.trim();
+      const aadharNumber = document.getElementById('aadhar-number').value.trim();
+
+      // Find if student exists with the given details
+      const student = students.find(s => s.regNumber === regNumber && s.aadharNumber === aadharNumber);
+
+      if (student) {
+        populateSemesterOptions(student.semesters);
+      } else {
+        alert("Student not found with the provided details.");
+      }
+    }
+
+    function populateSemesterOptions(semesters) {
+      const select = document.getElementById('semester-select');
+      select.innerHTML = '<option value="">Select Semester</option>';
+
+      semesters.forEach(sem => {
+        const option = document.createElement('option');
+        option.value = sem;
+        option.textContent = `Semester ${sem}`;
+        select.appendChild(option);
+      });
+
+      document.getElementById('semester-form').style.display = 'block';
+    }
+
+    function showSemesterForm() {
+      const semester = document.getElementById('semester-select').value;
+      const semesterForm = document.getElementById('semester-mark-form');
+      semesterForm.innerHTML = ''; // Clear previous form, if any
+
+      if (semester !== '') {
+        semesterForm.style.display = 'block';
+        createSubjectForm(parseInt(semester));
+      } else {
+        semesterForm.style.display = 'none';
+      }
+    }
+
+    function createSubjectForm(semester) {
+      const semesterForm = document.getElementById('semester-mark-form');
+      const semesterHeader = document.createElement('h3');
+      semesterHeader.textContent = `Semester ${semester}`;
+      semesterForm.appendChild(semesterHeader);
+
+      const subjectGroup = document.createElement('div');
+      subjectGroup.classList.add('subject-group');
+      subjectGroup.id = `subjects-sem${semester}`;
+
+      const subject1 = createSubjectInput(semester, 1);
+      const subject2 = createSubjectInput(semester, 2);
+
+      subjectGroup.appendChild(subject1);
+      subjectGroup.appendChild(subject2);
+
+      semesterForm.appendChild(subjectGroup);
+
+      const addSubjectButton = document.createElement('button');
+      addSubjectButton.type = 'button';
+      addSubjectButton.textContent = 'Add Subject';
+      addSubjectButton.onclick = () => addSubject(semester);
+      semesterForm.appendChild(addSubjectButton);
+    }
+
+    function createSubjectInput(semester, subjectNum) {
+      const subjectDiv = document.createElement('div');
+      subjectDiv.classList.add('subject');
+
+      const nameLabel = document.createElement('label');
+      nameLabel.textContent = `Subject ${subjectNum}:`;
+      subjectDiv.appendChild(nameLabel);
+
+      const nameInput = document.createElement('input');
+      nameInput.type = 'text';
+      nameInput.name = `marks[${semester - 1}][subjects][${subjectNum - 1}][name]`;
+      nameInput.placeholder = 'Subject Name';
+      nameInput.required = true;
+      subjectDiv.appendChild(nameInput);
+
+      const marksLabel = document.createElement('label');
+      marksLabel.textContent = 'Marks:';
+      subjectDiv.appendChild(marksLabel);
+
+      const marksInput = document.createElement('input');
+      marksInput.type = 'number';
+      marksInput.name = `marks[${semester - 1}][subjects][${subjectNum - 1}][marks]`;
+      marksInput.placeholder = 'Enter Marks';
+      marksInput.required = true;
+      subjectDiv.appendChild(marksInput);
+
+      return subjectDiv;
+    }
+
+    function addSubject(semester) {
+      const subjectGroup = document.getElementById(`subjects-sem${semester}`);
+      const subjectCount = subjectGroup.getElementsByClassName('subject').length + 1;
+
+      const newSubject = createSubjectInput(semester, subjectCount);
+      subjectGroup.appendChild(newSubject);
+    }
+
+    document.getElementById('add-marks-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Handle form submission logic here (e.g., sending data to server)
+      console.log('Form submitted. Data to be sent:', this.elements);
+    });
+  </script>
+</body>
+</html>

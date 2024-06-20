@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar Example</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#" class="logo"><img src="logo.png" alt="Website Logo"></a>
+        <a href="#" class="site-name">Academic Transcript</a>
+      </div>
+      <div class="navbar-right">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </nav>
+  </header>
+  <div class="content">
+    <h2>Let's begin with the login</h2>
+    <h3>Login to access your accounts</h3>
+    <div class="button-container">
+      <a href="#" class="btn" id="studentBtn">Student</a>
+      <a href="#" class="btn" id="adminBtn">Admin</a>
+    </div>
+  </div>
+  <div id="response"></div> <!-- Element to display response messages -->
+</div>
+<div class="modal" id="studentModal">
+  <div class="modal-content">
+      <span class="close" id="studentClose">&times;</span>
+      <h2>Student Sign In</h2>
+      <form id="studentSignInForm">
+          <label for="studentRegNo">Registration Number</label>
+          <input type="text" id="studentRegNo" name="studentRegNo" required>
+          <label for="studentPassword">Password</label>
+          <input type="password" id="studentPassword" name="studentPassword" required>
+          <button type="submit" class="btn" id="studentSignInBtn">Sign In</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="studentRegisterLink">Register here</a></p>
+  </div>
+</div>
+<div class="modal" id="adminModal">
+  <div class="modal-content">
+      <span class="close" id="adminClose">&times;</span>
+      <h2>Admin Sign In</h2>
+      <form id="adminSignInForm">
+          <label for="adminRegNo">Registration Number</label>
+          <input type="text" id="adminRegNo" name="adminRegNo" required>
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" name="adminPassword" required>
+          <button type="submit" class="btn" id="adminSignInBtn">Sign In</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="adminRegisterLink">Register here</a></p>
+  </div>
+</div>
+
+<!-- st udent signup-->
+<div class="modal" id="studentSignUpModal">
+  <div class="modal-content">
+      <span class="close" id="studentSignUpClose">&times;</span>
+      <h2>Student Sign Up</h2>
+      <form id="studentRegisterForm">
+          <label for="studentName">Name</label>
+          <input type="text" id="studentName" name="studentName" required>
+          <label for="studentRegNoSignUp">Registration Number</label>
+          <input type="text" id="studentRegNoSignUp" name="studentRegNoSignUp" required>
+          <label for="studentBranch">Branch</label>
+          <input type="text" id="studentBranch" name="studentBranch" required>
+          <label for="studentPasswordSignUp">Password</label>
+          <input type="password" id="studentPasswordSignUp" name="studentPasswordSignUp" required>
+          <label for="studentConfirmPassword">Confirm Password</label>
+          <input type="password" id="studentConfirmPassword" name="studentConfirmPassword" required>
+          <button type="submit" class="btn" id="studentSignUpBtn">Sign Up</button>
+      </form>
+  </div>
+</div>
+
+
+<!-- adminsign up -->
+<div class="modal" id="adminSignUpModal">
+  <div class="modal-content">
+      <span class="close" id="adminSignUpClose">&times;</span>
+      <h2>Admin Sign Up</h2>
+      <form id="adminRegisterForm">
+          <label for="adminName">Name</label>
+          <input type="text" id="adminName" name="adminName" required>
+          <label for="adminRegNoSignUp">Registration Number</label>
+          <input type="text" id="adminRegNoSignUp" name="adminRegNoSignUp" required>
+          <label for="adminBranch">Branch</label>
+          <input type="text" id="adminBranch" name="adminBranch" required>
+          <label for="adminPasswordSignUp">Password</label>
+          <input type="password" id="adminPasswordSignUp" name="adminPasswordSignUp" required>
+          <label for="adminConfirmPassword">Confirm Password</label>
+          <input type="password" id="adminConfirmPassword" name="adminConfirmPassword" required>
+          <button type="submit" class="btn" id="adminSignUpBtn">Sign Up</button>
+      </form>
+  </div>
+</div>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>

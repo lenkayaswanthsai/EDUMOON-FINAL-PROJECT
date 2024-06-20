@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login and Sign Up Page</title>
+     <link rel="stylesheet" href="styles1.css">
+ </head>
+ <body>
+     <header class="header">
+         <h1>Academic Transcript</h1>
+     </header>
+     <div class="container">
+         <div class="login-container" id="adminLogin">
+             <button id="adminBtn">Admin Login</button>
+         </div>
+         <div class="login-container" id="studentLogin">
+             <button id="studentBtn">Student Login</button>
+         </div>
+     </div>
+     <div class="quote">
+         <h2>Begin with the Login</h2>
+         <p>"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
+     </div>
+ 
+     <div id="loginModal" class="modal">
+         <div class="modal-content">
+             <span class="close">&times;</span>
+             <form>
+                 <label for="regNumber">Registration Number:</label>
+                 <input type="text" id="regNumber" name="regNumber" required>
+                 <label for="password">Password:</label>
+                 <input type="password" id="password" name="password" required>
+                 <button type="submit" class="login-btn">Sign in</button>
+                 <p>Don't have an account? <a href="#" id="signUpLink">Sign up</a></p>
+             </form>
+         </div>
+     </div>
+ 
+     <div id="signUpModal" class="modal">
+         <div class="modal-content">
+             <span class="close">&times;</span>
+             <form>
+                 <h2>Sign Up</h2>
+                 <label for="name">Name:</label>
+                 <input type="text" id="name" name="name" required>
+                 <label for="newRegNumber">Registration Number:</label>
+                 <input type="text" id="newRegNumber" name="newRegNumber" required>
+                 <label for="newPassword">Password:</label>
+                 <input type="password" id="newPassword" name="newPassword" required>
+                 <label for="confirmPassword">Confirm Password:</label>
+                 <input type="password" id="confirmPassword" name="confirmPassword" required>
+                 <button type="submit" class="signup-btn">Sign up</button>
+             </form>
+         </div>
+     </div>
+ 
+     <script src="scripts.js"></script>
+ </body>
+ </html>

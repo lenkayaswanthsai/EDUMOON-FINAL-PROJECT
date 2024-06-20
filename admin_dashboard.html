@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar Example</title>
+<link rel="stylesheet" href="demostu.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#" class="logo"><img src="logo.png" alt="Website Logo"></a>
+        <a href="#" class="site-name">Academic Transcript</a>
+      </div>
+      <div class="navbar-right">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="contactus.html" class="nav-link">Contact Us</a>
+        
+        
+        
+        
+      </div>
+    </nav>
+  </header>
+  <div class="form-container">
+    <div class="form-header">
+        <h2>Enter Students Academic Marks</h2>
+    </div>
+    <form id="student-form">
+        <div class="form-group">
+            <label for="reg-number">Registered Number:</label>
+            <input type="text" id="reg-number" name="reg-number" placeholder="Enter Your Hall Ticket /Registered Number" required>
+        </div>
+        
+        <div class="button-container">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+  </div>
+ 
+  
+<div class="details-container form-container">
+  <div class="details-group">
+    <div class="form-header">
+      <h2>Enter Students Academic Marks</h2>
+  </div>
+    <label for="student-name">STUDENT NAME:</label>
+    <input type="text" id="student-name" name="student-name" readonly>
+  </div>
+
+  <div class="details-group">
+    <label for="registration-number">REGISTRATION NUMBER:</label>
+    <input type="text" id="registration-number" name="registration-number" readonly>
+  </div>
+  <div class="details-group">
+    <label for="branch">BRANCH:</label>
+    <input type="text" id="branch" name="branch" readonly>
+  </div>
+  <div class="button-container">
+    <button type="submit" id="enterMarksBtn">Enter Marks</button>
+  </div>
+  <form id="marks-form">
+    <input type="text" id="student-id" placeholder="Student ID">
+    <div class="subject-container">
+        <input type="text" class="subject-name" placeholder="Subject Name">
+        <input type="number" class="subject-marks" placeholder="Marks">
+    </div>
+   
+    <button type="submit">Submit</button>
+</form>
+
+</div>
+
+<!-- st udent signup-->
+<div class="modal" id="studentSignUpModal">
+  <div class="modal-content">
+      <span class="close" id="studentSignUpClose">&times;</span>
+      <h2>Student Sign Up</h2>
+      <form id="studentRegisterForm">
+          <label for="studentName">Name</label>
+          <input type="text" id="studentName" name="studentName" required>
+          <label for="studentRegNoSignUp">Registration Number</label>
+          <input type="text" id="studentRegNoSignUp" name="studentRegNoSignUp" required>
+          <label for="studentBranch">Branch</label>
+          <input type="text" id="studentBranch" name="studentBranch" required>
+          <label for="Aadhar">Aadhar</label>
+          <input type="text" id="Aadhar" name="Aadhar" required>
+          
+          <button type="submit" class="btn" id="studentSignUpBtn">Sign Up</button>
+      </form>
+  </div>
+</div>
+
+
+
+
+
+<div class="modal" id="studentModal">
+  <div class="modal-content">
+      <span class="close" id="studentClose">&times;
+      <h2>Register Student Here</h2>
+      <form id="studentSignInForm">
+          <label for="Name">Student Name</label>
+          <input type="text" id="Name" name="studentName" placeholder="Enter Student Name" required>
+          <label for="Aadhar">Aadhaar Number</label>
+          <input type="text" id="Aadhar" name="Aadhar" placeholder="Enter Aadhaar Number" required>
+          <label for="studentRegNo">Registration Number</label>
+          <input type="text" id="studentRegNo" name="studentRegNo" placeholder="Enter Student Registration Number" required>
+          <label for="Branch">Branch Name</label>
+          <input type="text" id="Branch" name="Branch" placeholder="CSE/IT/MECH/ECE/CIV" required>
+          <div class="button-container">
+              <button type="submit">Submit</button>
+          </div>
+      </form>
+  </div>
+</div>
+<div class="form-container  marks-container">
+<div class="container my-5 form-header">
+  <h1>Register Marks</h1>
+  </div>
+  <form id="marksForm">
+    <div class="form-group">
+      <label for="regNumber">Registration Number</label>
+      <input type="text" class="form-control" id="regNumber" name="regNumber" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject1">Maths</label>
+      <input type="number" class="form-control" id="subject1" name="subject1" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject2">Physics</label>
+      <input type="number" class="form-control" id="subject2" name="subject2" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject3">Chemistry</label>
+      <input type="number" class="form-control" id="subject3" name="subject3" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject4">Sanskrit</label>
+      <input type="number" class="form-control" id="subject4" name="subject4" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject5">Hindi</label>
+      <input type="number" class="form-control" id="subject5" name="subject5" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject6">English</label>
+      <input type="number" class="form-control" id="subject6" name="subject6" required>
+    </div  class="button-container">
+
+    <button type="submit" class="btn btn-primary"  >Register Marks</button>
+  </form>
+</div>
+</div>
+
+
+  <script src="demoscript.js"></script>
+</body>
+</html>

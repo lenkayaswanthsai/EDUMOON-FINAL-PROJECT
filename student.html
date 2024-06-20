@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar Example</title>
+<link rel="stylesheet" href="student.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#" class="logo"><img src="logo.png" alt="Website Logo"></a>
+        <a href="#" class="site-name">Academic Transcript</a>
+      </div>
+      <div class="navbar-right" >
+        <button id="signOutButton" style="background-color: transparent; color: white;">Sign Out</button>
+        <a href="contactus.html" class="nav-link">Contact Us</a>
+        <a href="aboutus.html" class="nav-link">About</a>
+        <a href="achievement.html" class="nav-link">Achievements</a>
+      </div>
+    </nav>
+  </header>
+  <div class="form-container">
+
+    <div class="form-header" id="studentInfo">
+        <h2>Welcome ....</h2>
+    </div>
+   
+</div>
+  <div class="form-container">
+
+    <div class="form-header">
+        <h2>Know Your Academic marks</h2>
+    </div>
+    <form id="student-form">
+        
+      
+        <div class="button-container">
+            <button id="knowMarksBtn" class="btn btn-primary">Know your Marks</button>
+        </div>
+    </form>
+</div>
+
+<div class="form-container  marks-container">
+    <div class="container my-5 form-header">
+      <h1>Here is your Marks</h1>
+      </div>
+      <form id="marksForm">
+        <div class="form-group">
+          <label for="regNumber">Registration Number</label>
+          <input type="text" class="form-control" id="regNumber" name="regNumber" required readonly>
+        </div>
+    
+        <div class="form-group">
+          <label for="subject1">Maths</label>
+          <input type="number" class="form-control" id="subject1" name="subject1" required readonly>
+        </div>
+    
+        <div class="form-group">
+          <label for="subject2">Physics</label>
+          <input type="number" class="form-control" id="subject2" name="subject2" required readonly>
+        </div>
+    
+        <div class="form-group">
+          <label for="subject3">Chemistry</label>
+          <input type="number" class="form-control" id="subject3" name="subject3" required readonly>
+        </div>
+    
+        <div class="form-group">
+          <label for="subject4">Sanskrit</label>
+          <input type="number" class="form-control" id="subject4" name="subject4" required readonly>
+        </div>
+     
+        <div class="form-group">
+          <label for="subject5">Hindi</label>
+          <input type="number" class="form-control" id="subject5" name="subject5" required readonly>
+        </div>
+    
+        <div class="form-group">
+          <label for="subject6">English</label>
+          <input type="number" class="form-control" id="subject6" name="subject6" required readonly>
+        </div  class="button-container">
+    
+      
+      </form>
+    </div>
+    </div>
+
+
+<script src="student.js"></script>
+
+</body>
+</html>

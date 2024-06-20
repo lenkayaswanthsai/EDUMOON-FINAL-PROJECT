@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Marks</title>
+</head>
+<body>
+  <h2>Enter Marks for Semester</h2>
+  <form id="marksForm">
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName" required><br><br>
+
+    <label for="studentId">Student ID:</label>
+    <input type="text" id="studentId" name="studentId" required><br><br>
+
+    <label for="semester">Semester:</label>
+    <select id="semester" name="semester" required>
+      <option value="1">SEMESTER 1</option>
+      <option value="2">SEMESTER 2</option>
+      <!-- Add options for other semesters here -->
+    </select><br><br>
+
+    <!-- Repeat this block for each subject in the semester -->
+    <label for="subject1">Engineering Mathematics -1:</label>
+    <input type="number" id="subject1" name="subject1" min="0" max="100" required><br><br>
+
+    <label for="subject2">Basic Electronics:</label>
+    <input type="number" id="subject2" name="subject2" min="0" max="100" required><br><br>
+
+    <!-- Add more subjects here -->
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

@@ -1,0 +1,227 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://7heven.com/wp-content/uploads/2023/04/Start-promoting-yourself.jpg'); /* Add your image URL here */
+    background-size: cover; /* This makes the background image cover the entire navbar */
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: -1% 35%; 
+    background-size: 50%;
+    background-color: rgb(233, 240, 246);
+    
+    
+ }
+  
+  
+  /* Header and navigation styling */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 25px 10px;
+    background-color: black;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .logo {
+    margin-right: 5px;
+  }
+  .logo img {
+    height: 40px; /* Adjust the size of the logo image */
+    margin-right: 9px;
+  }
+  
+  .site-name {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    
+  }
+   
+  .navbar-right a
+  {
+    margin-right: 70px;
+  }
+  .nav-link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+   
+    position: relative;
+    
+  }
+  .nav-link:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white color */
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    text-decoration : none;
+  }
+  .circles-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+  }
+  
+  .circle img {
+    width: 147%;
+    height: auto;
+  }
+  .circle-1 {
+    position: relative;
+  top: 70px;  /* Adjust the top position */
+  right: 200px;
+  }
+  
+  .circle-2 {
+    position: relative;
+  top: 20px;  /* Adjust the top position */
+  right: 000px;
+  }
+  
+  .circle-3 {
+    position: relative;
+  top: -10px;  /* Adjust the top position */
+  right: 200px;
+  }
+  
+  
+.boxes {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    gap: 5px;
+    align-items: center;
+}
+
+.box {
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 0px;
+}
+
+.box img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.box-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #800080;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+}
+  /* Move circles to different positions on hover */
+  
+  .content {
+    text-align: right;
+    color: black;
+    margin: 100px auto; /* Centering the content with some margin from the top */
+    max-width: 900px; /* Setting a maximum width for the content */
+    padding: 140px;
+    border-radius: 80px;
+    right:8%;
+    position: fixed;
+   
+  }
+  
+  .content h2 {
+    font-size: 2.5rem;
+    right: 50px;
+   
+    margin-right: 70px;
+    color: black; /* Dark grey color for the main heading */
+  }
+  
+  .content h3 {
+    font-size: 1.3rem;
+    color: #092536; /* Lighter grey color for the subtitle */
+    margin-bottom: 10px;
+  }
+  h2{
+    margin-top: 60px;
+  }
+  h3{
+   margin-right: 100px;
+   margin-top: 30px;
+  }
+  .begin-button {
+    background-color: black;
+    color: white;
+    padding: 13px 50px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    left: 990px; /* Adjust left position */
+    bottom: 170px;
+    position: fixed;
+    text-decoration: none;
+    
+   
+}
+
+.begin-button:hover {
+    background-color: #333;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Transcript</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e6f2ff;
+        }
+       
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .site-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .navbar-right {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: #000;
+  }
+
+
+   .form-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 50%;
+            max-width: 600px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            width: 48%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .btn-submit {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+   <header>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="#" class="logo"><img src="logo.png" alt="Website Logo"></a>
+      <a href="#" class="site-name">Academic Transcript</a>
+    </div>
+    <div class="navbar-right">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+      <a href="aboutus.html" class="nav-link">About</a>
+    </div>
+  </nav>
+</header>
+    <main>
+        <div class="overlay" id="overlay"></div>
+
+    <div class="form-container" id="biodata-form-container">
+        <h2>Biodata</h2>
+        <form id="biodata-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" disabled>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                <div class="form-group">
+                    <label for="registrationNumber">Registration Number:</label>
+                    <input type="text" id="regNumber" name="regNumber">
+                </div>
+            </div>
+
+            <h2>Skills and Abilities</h2>
+            <div class="form-group">
+                <label for="skills">Skill Name</label>
+                <textarea name="skills" id="skills"></textarea>
+            </div>
+
+            <h2>Achievements</h2>
+            <h3>Courses</h3>
+            <div class="form-group">
+                <label for="achievements">Achievements</label>
+                <textarea name="achievements" id="achievements"></textarea>
+            </div>
+
+            <h3>Certificates</h3>
+            <div class="form-group">
+                <label for="Certifications">Certifications</label>
+                <textarea name="Certifications" id="Certifications"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+    </main>
+    <script>
+       
+       document.getElementById('achievementsLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('biodata-form-container').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        });
+
+        document.getElementById('overlay').addEventListener('click', function() {
+            document.getElementById('biodata-form-container').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar Example</title>
+<link rel="stylesheet" href="achievements.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#" class="logo"><img src="logo.png" alt="Website Logo"></a>
+        <a href="#" class="site-name">Academic Transcript</a>
+      </div>
+      <div class="navbar-right">
+        
+        <a href="contactus.html" class="nav-link">Contact Us</a>
+        <a href="aboutus.html" class="nav-link">About</a>
+        <a href="#" id="achievementsLink" class="nav-link">submit My Achievements</a>
+        <button id="signOutButton" style="background-color: transparent; color: white;">Sign Out</button>
+      </div>
+    </nav>
+  </header>
+  <div class="container" style="max-width: 600px; margin: 40px 150px; padding: 10px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <div class="form-header" style="text-align: center; margin-bottom: 20px;  background-color: #333;">
+        <h2 style="margin: 0; font-family: Arial, sans-serif; color: #f2eded;">Know You & Your Friends Achievements</h2>
+    </div>
+    <form id="student-form">
+        <div class="form-group" style="margin-bottom: 20px;">
+            <label for="regNumberInput" style="display: block; margin-bottom: 5px; font-family: Arial, sans-serif; color: #333;">Registered Number:</label>
+            <input type="text" id="regNumberInput" name="reg-number" placeholder="Enter Your Hall Ticket / Registered Number" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+        </div>
+        <div class="button-container" style="text-align: center;">
+            <button type="submit" style="padding: 10px 20px; font-family: Arial, sans-serif; color: #fff;  background-color: #333; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+        </div>
+    </form>
+</div>
+<div class="overlay" id="overlay" style="display: none;"></div>
+
+<div class="form-container" id="achievement-form-container" style="display: none;">
+    <h1 style="text-align: center;"> Achievements</h1>
+    <br><br>
+    <form id="achievement-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fullNameDisplay">Full Name:</label>
+                <input type="text" id="fullNameDisplay" name="fullName" readonly>
+            </div>
+            <div class="form-group">
+                <label for="dobDisplay">Date of Birth:</label>
+                <input type="text" id="dobDisplay" name="dob" readonly>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="emailDisplay">Email:</label>
+                <input type="email" id="emailDisplay" name="email" readonly>
+            </div>
+            <div class="form-group">
+                <label for="phoneDisplay">Phone Number:</label>
+                <input type="text" id="phoneDisplay" name="phone" readonly>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="addressDisplay">Address:</label>
+                <input type="text" id="addressDisplay" name="address" readonly>
+            </div>
+            <div class="form-group">
+                <label for="regNumberDisplay">Registration Number:</label>
+                <input type="text" id="regNumberDisplay" name="regNumber" readonly>
+            </div>
+        </div>
+        <h2>Skills and Abilities</h2>
+        <div class="form-group">
+            <label for="skillsDisplay">Skill Name</label>
+            <textarea name="skills" id="skillsDisplay" readonly></textarea>
+        </div>
+        <h2>Achievements</h2>
+        <h3>Courses</h3>
+        <div class="form-group">
+            <label for="achievementsDisplay">Achievements</label>
+            <textarea name="achievements" id="achievementsDisplay" readonly></textarea>
+        </div>
+        <h3>Certificates</h3>
+        <div class="form-group">
+            <label for="certificationsDisplay">Certifications</label>
+            <textarea name="Certifications" id="certificationsDisplay" readonly></textarea>
+        </div>
+    </form>
+    <button id="closeButton" style="padding: 10px 20px; font-family: Arial, sans-serif; color: #fff;  background-color: #333; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+</div>
+
+
+  <!-- pop up form is down here -->
+  <div class="overlay" id="overlay"></div>
+
+  <div class="form-container" id="biodata-form-container">
+      <h1 style="text-align: center;"> My Achievements</h1>
+      <br><br>
+      <form id="biodata-form">
+        
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="fullName">Full Name:</label>
+                  <input type="text" id="fullName" name="fullName" >
+              </div>
+              <div class="form-group">
+                  <label for="dob">Date of Birth:</label>
+                  <input type="text" id="dob" name="dob">
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email">
+              </div>
+              <div class="form-group">
+                  <label for="phone">Phone Number:</label>
+                  <input type="text" id="phone" name="phone">
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="address">Address:</label>
+                  <input type="text" id="address" name="address">
+              </div>
+              <div class="form-group">
+                  <label for="registrationNumber">Registration Number:</label>
+                  <input type="text" id="regNumber" name="regNumber">
+              </div>
+          </div>
+
+          <h2>Skills and Abilities</h2>
+          <div class="form-group">
+              <label for="skills">Skill Name</label>
+              <textarea name="skills" id="skills"></textarea>
+          </div>
+
+          <h2>Achievements</h2>
+          <h3>Courses</h3>
+          <div class="form-group">
+              <label for="achievements">Achievements</label>
+              <textarea name="achievements" id="achievements"></textarea>
+          </div>
+
+          <h3>Certificates</h3>
+          <div class="form-group">
+              <label for="Certifications">Certifications</label>
+              <textarea name="Certifications" id="Certifications"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Submit</button>
+      </form>
+  </div>
+<script src="achievements.js"></script>
+</body>
+</html>

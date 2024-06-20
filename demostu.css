@@ -1,0 +1,335 @@
+*
+{margin: 0;
+  padding: 0;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-left .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-left .site-name {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .navbar-right .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+.form-container {
+    width: 50%;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    margin: -1rem -1rem 1rem -1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .add-button
+  {text-decoration: none;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: 2px;
+    border-color: white;
+  
+  }
+.button-container {
+    text-align: center;
+  }
+  
+  .button-container button {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .semester-container {
+    margin-bottom: 2rem;
+  }
+  
+  .semester-header {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subject-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .subject {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
+  
+  .subject label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subject input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 10px 0 5px 0;
+}
+
+input {
+  margin: 5px 0 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #555;
+}
+.register-link {
+  display: block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+#marksFormContainer {
+  display: none; /* Hide the marks form container by default */
+}
+
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-header {
+  margin-bottom: 20px;
+}
+.form-header h2 {
+  margin: 0;
+  color: #fefbfb;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.form-group label {
+  display: block;
+  color: #666;
+}
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button-container button {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-container button:hover {
+  background-color: #4cae4c;
+}
+.details-container {
+  display: none;
+}
+
+
+/* add subject css */
+
+#container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.semester {
+  background-color: #dcdcdc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.semester-title {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.subject-pair {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subject {
+  width: 48%;
+  margin-bottom: 10px;
+}
+
+.subject label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.subject input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.add-subject, .add-semester {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-semester {
+  margin-top: 20px;
+}
+.marks-container
+{
+  display: none;
+}
+button{
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

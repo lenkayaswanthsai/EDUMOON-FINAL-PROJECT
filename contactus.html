@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar Example</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#" class="logo"><img src="logo.png" alt="Website Logo"></a>
+        <a href="#" class="site-name">Academic Transcript</a>
+      </div>
+      <div class="navbar-right">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="contactus.html" class="nav-link">Contact Us</a>
+        <a href="aboutus.html" class="nav-link">About</a>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <div class="content">
+    <div class="about-section">
+        <div class="about-content">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, suggestions, or concerns, we are here to help. Feel free to reach out to us using the information provided below. Our team strives to respond to all inquiries promptly and effectively. We look forward to hearing from you!</p>
+            <p>Email: academictranscript@gmail.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 Academic Street, vizag City, Andhra pradesh State, 531018</p>
+            <a href="#" class="btn" id="studentBtn">Click Here</a>
+        </div>
+    </div>
+</div>
+<script>
+  function sendEmail() {
+      var recipient = "academictranscript6@gmail.com";
+      var subject = "Request for Academic Transcript";
+      var body = "Dear Academic Office,%0D%0A%0D%0AI would like to request a copy of my academic transcript.%0D%0A%0D%0AThank you,%0D%0A[Your Name]";
+      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("studentBtn").addEventListener("click", sendEmail);
+  });
+</script>
+</body>
+</html>
