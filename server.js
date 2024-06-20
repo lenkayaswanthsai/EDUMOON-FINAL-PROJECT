@@ -2,8 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const app = express();
-const logger = require('morgan');
-app.use(logger('dev'));
+
 const cors = require('cors');
 app.use(express.json());
 app.use(cors());
